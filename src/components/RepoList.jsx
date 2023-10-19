@@ -12,7 +12,7 @@ const RepoList = () => {
       try {
         const username = "omaah2";
         const token =
-          "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";
+          "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";
 
         const repoUrl = `https://api.github.com/users/${username}/repos`;
         const response = await fetch(repoUrl, {
