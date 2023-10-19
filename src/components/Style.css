@@ -1,0 +1,38 @@
+@keyframes colorChange {
+  0% {
+    color: #fff; /* Initial color */
+  }
+  100% {
+    color: #bc60c4;
+  }
+}
+
+.text-color-change {
+  color: #fff; /* Initial color */
+  text-shadow: 2px 2px 4px #000; /* Optional text shadow */
+  margin: 2;
+  animation: colorChange 2s alternate infinite; /* Animation duration and properties */
+}
+
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #af5da3;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
