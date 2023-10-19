@@ -17,7 +17,7 @@ const RepoDetails = () => {
       try {
         const username = "omaah2"; // Replace with your GitHub username
         const token =
-          "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"; // Replace with your GitHub Personal Access Token
+          "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"; // Replace with your GitHub Personal Access Token
 
         const repoUrl = `https://api.github.com/repos/${username}/${repoName}`;
         const response = await fetch(repoUrl, {
