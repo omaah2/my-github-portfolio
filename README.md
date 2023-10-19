@@ -1,10 +1,12 @@
 # My GitHub Portfolio
 
-Welcome to My GitHub Portfolio! This project showcases my GitHub repositories and allows you to explore the projects I've been working on. 🚀
+Welcome to My GitHub Portfolio!😇 This project showcases my GitHub repositories and allows you to explore the projects I've been working on. 🚀
+
 
 ## Table of Contents
 - [Getting Started](#getting-started)
 - [Usage](#usage)
+- [TechnologyUsed](Technology-used)
 
 
 ## Getting Started
@@ -45,5 +47,16 @@ This will start the development server, and you can access the portfolio in your
 ## Features
 
 View a list of your GitHub repositories.
+There's a 404-page for pages not found,
+A custom error message (error boundary)
 Click on a repository to see more details.
 Enjoy a beautiful and responsive user interface. 🌟    
+
+
+## Technologies Used
+
+- React for the frontend.
+- Tailwindcss for styling.
+- React-icons for icons.
+- framer-motion for animation
+- react-router-dom for navigation and routing
