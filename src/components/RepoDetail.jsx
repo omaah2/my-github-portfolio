@@ -6,25 +6,19 @@ const RepoDetails = () => {
   const { repoName } = useParams();
   const [repository, setRepository] = useState(null);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // Use useNavigate instead of useHistory
+  const navigate = useNavigate();
 
   const goBack = () => {
-    navigate(-1); // Go back to the previous page
+    navigate(-1);
   };
 
   useEffect(() => {
     (async () => {
       try {
-        const username = "omaah2"; // Replace with your GitHub username
-        const token =
-          "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"; // Replace with your GitHub Personal Access Token
+        // Update the endpoint to fetch data for a specific repository
+        const repoUrl = `https://api.github.com/repos/omaah2/${repoName}`;
 
-        const repoUrl = `https://api.github.com/repos/${username}/${repoName}`;
-        const response = await fetch(repoUrl, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await fetch(repoUrl);
 
         if (response.ok) {
           const data = await response.json();

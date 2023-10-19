@@ -7,32 +7,51 @@ const RepoList = () => {
   const [repositories, setRepositories] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       const username = "omaah2";
+  //       const token =
+  //         "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";
+
+  //       const repoUrl = `https://api.github.com/users/${username}/repos`;
+  //       const response = await fetch(repoUrl, {
+  //         headers: {
+  //           Authorization: `Bearer ${token}`,
+  //         },
+  //       });
+
+  //       if (response.ok) {
+  //         const data = await response.json();
+  //         setRepositories(data);
+  //       } else {
+  //         console.error(
+  //           "Error fetching data:",
+  //           response.status,
+  //           response.statusText
+  //         );
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   })();
+  
   useEffect(() => {
     (async () => {
       try {
-        const username = "omaah2";
-        const token =
-          "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";
+        const repoUrl = "https://api.github.com/users/omaah2";
 
-        const repoUrl = `https://api.github.com/users/${username}/repos`;
-        const response = await fetch(repoUrl, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const repoEndPoint = `${repoUrl}/repos`;
+        const response = await fetch(repoEndPoint);
 
-        if (response.ok) {
-          const data = await response.json();
-          setRepositories(data);
-        } else {
-          console.error(
-            "Error fetching data:",
-            response.status,
-            response.statusText
-          );
-        }
+        const data = await response.json();
+        console.log(response);
+        console.log(data);
+        setRepositories(data);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.log(error);
       } finally {
         setLoading(false);
       }
