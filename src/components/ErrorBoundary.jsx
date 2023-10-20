@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -12,19 +11,26 @@ class ErrorBoundary extends Component {
     console.error(error, info);
   }
 
+  handleBackToHome = () => {
+    window.location.href = "/"; // Redirect to the home page
+  };
+
   render() {
     if (this.state.hasError) {
       return (
-        <div className=" text-center p-16">
+        <div className="text-center p-16">
           <h2 className="font-bold text-purple-500">
             Oops! Something went wrong. 😔
           </h2>
           <p className="text-purple-500">
             We apologize for the inconvenience. Please try again later.
           </p>
-          <Link to="/" className="text-purple-500 hover:underline">
+          <button
+            className="text-purple-500 hover:underline"
+            onClick={this.handleBackToHome}
+          >
             Back to Home
-          </Link>
+          </button>
         </div>
       );
     }
@@ -33,3 +39,5 @@ class ErrorBoundary extends Component {
 }
 
 export default ErrorBoundary;
+
+

@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import RepoList from "./components/RepoList";
 import RepoDetail from "./components/RepoDetail";
 import NotFound from "./components/NotFound";
+import ErrorComponent from "./components/ErrorComponent";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/repos/:repoName" element={<RepoDetail />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/errorBoundary" element={<ErrorBoundary />} />
+          <Route path="/errorComponent" element={<ErrorComponent />} />
         </Routes>
       </ErrorBoundary>
     </Router>
