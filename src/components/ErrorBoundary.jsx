@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -21,6 +22,9 @@ class ErrorBoundary extends Component {
           <p className="text-purple-500">
             We apologize for the inconvenience. Please try again later.
           </p>
+          <Link to="/" className="text-purple-500 hover:underline">
+            Back to Home
+          </Link>
         </div>
       );
     }

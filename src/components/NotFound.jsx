@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NotFound = () => (
   <div className="container text-center mx-auto p-16 text-purple-500">
@@ -7,6 +8,9 @@ const NotFound = () => (
       The page you're looking for does not exist. Please check the URL and try
       again.
     </p>
+    <Link to="/" className="text-purple-500 hover:underline">
+      Back to Home
+    </Link>
   </div>
 );
 

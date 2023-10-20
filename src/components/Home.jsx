@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Navbar from "./Nav";
 
 const Home = () => {
   return (
     <>
+      <Navbar />
       <div className="bg-gradient-to-r from-purple-300 to-purple-500 min-h-screen flex flex-col justify-center items-center">
         <h1 className="text-5xl font-extrabold text-white mb-4 text-center">
           Welcome to My GitHub Portfolio{" "}
@@ -22,8 +23,7 @@ const Home = () => {
         <p
           style={{
             textAlign: "center",
-                      fontFamily: "cursive",
-    
+            fontFamily: "cursive",
           }}
           className="lg:pl-96 mb-10 text-center text-white sm:pl-32"
         >
